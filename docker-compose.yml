@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  fbp:
+    image: ${DOCKER_REGISTRY-}fbp
+    build:
+      context: .
+      dockerfile: FBP/Dockerfile
+
+  organizationsetup:
+    image: ${DOCKER_REGISTRY-}organizationsetup
+    build:
+      context: .
+      dockerfile: OrganizationSetUp/Dockerfile
+
+
+  savingsdeclaration:
+    image: ${DOCKER_REGISTRY-}savingsdeclaration
+    build:
+      context: .
+      dockerfile: SavingsDeclaration/Dockerfile
+
+
+  savingsproof:
+    image: ${DOCKER_REGISTRY-}savingsproof
+    build:
+      context: .
+      dockerfile: SavingsProof/Dockerfile
+
